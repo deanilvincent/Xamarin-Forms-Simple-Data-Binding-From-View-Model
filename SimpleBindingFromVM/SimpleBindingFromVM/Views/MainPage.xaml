@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SimpleBindingFromVM"
+             x:Class="SimpleBindingFromVM.MainPage"
+             xmlns:vm="clr-namespace:SimpleBindingFromVM.ViewModels">
+
+    <ContentPage.BindingContext>
+        <vm:UsersViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="10">
+        <Entry Text="{Binding Name, Mode=TwoWay}"/>
+        <Label Text="{Binding DisplayName, Mode=TwoWay}"/>
+    </StackLayout>
+</ContentPage>
